@@ -19,7 +19,7 @@ const getImageUrl = (img: any): string | null => {
   return null;
 };
 
-export default function Aktualnosci() {
+export default function News() {
   const [posts, setPosts] = useState<Aktualnosc[]>([]);
   const [expanded, setExpanded] = useState<{ [key: number]: boolean }>({});
   const [visibleCount, setVisibleCount] = useState(4); // 👈 widoczne 4 wpisy
@@ -42,7 +42,7 @@ export default function Aktualnosci() {
 
   if (posts.length === 0) {
     return (
-      <div className="pt-16 pb-16 w-[70%] mx-auto sd:w-[85%] text-center text-white/60">
+      <div className="pt-16 pb-16 w-[70%] mx-auto  text-center text-white/60 sm:w-[85%]">
         Loading news...
       </div>
     );
@@ -55,7 +55,7 @@ export default function Aktualnosci() {
       </h1>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
-        {posts.slice(0, visibleCount).map((post) => { // 👈 tylko tyle ile visibleCount
+        {posts.slice(0, visibleCount).map((post) => {
           const imageUrl = getImageUrl(post.acf?.grafika_aktualnosci);
           const isExpanded = expanded[post.id] ?? false;
 
@@ -66,7 +66,7 @@ export default function Aktualnosci() {
             >
               {imageUrl ? (
                 <Image
-                  src={imageUrl}
+                  src={imageUrl as string}
                   alt={post.acf?.nazwa_aktualnosci ?? ""}
                   width={800}
                   height={500}
@@ -88,7 +88,7 @@ export default function Aktualnosci() {
               </p>
 
               {post.acf?.tresc_aktualnosci &&
-                post.acf.tresc_aktualnosci.length > 120 && (
+                post.acf?.tresc_aktualnosci?.length > 120 && (
                   <button
                     onClick={() => toggleExpand(post.id)}
                     className="text-[#FC9700] mt-2 underline"

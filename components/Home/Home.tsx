@@ -3,7 +3,7 @@ import React from 'react'
 import Hero from './Hero/Hero'
 import Services from './Services/Services'
 import Resume from './Resume/Resume'
-import Projectx from './ProjectX/ProjectX'
+/*import Projectx from './ProjectX/ProjectX'*/
 import Projects from './Projects/Projects'
 import Skills from './Skills/Skills'
 import WhatWeDo from './WhatWeDo/WhatWeDo'

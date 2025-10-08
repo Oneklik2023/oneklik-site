@@ -1,53 +1,71 @@
 "use client";
-import React from 'react'
-import { useState } from "react";
+import React, { useState } from "react";
 
 export default function ContactForm() {
   const [message, setMessage] = useState("");
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    const res = await fetch("https://twojadomena.pl/wp-json/contact-form-7/v1/contact-forms/123/feedback", {
-      method: "POST",
-      body: new FormData(e.target as HTMLFormElement),
-    });
+    try {
+      const res = await fetch(
+        "https://cms.oneklik.pl/wp-json/fluentform/v2/forms/1/submit", // 👈 zmień 1 na swoje ID
+        {
+          method: "POST",
+          body: new FormData(e.currentTarget),
+        }
+      );
 
-    const data = await res.json();
-    setMessage(data.message);
+      const data = await res.json();
+      if (data.errors) {
+        setMessage("Błąd: " + JSON.stringify(data.errors));
+      } else {
+        setMessage("Wiadomość wysłana poprawnie!");
+      }
+    } catch (error) {
+      setMessage("Wystąpił błąd. Spróbuj ponownie później.");
+    }
   };
 
   return (
-    <div className=' pt-16 pb-16 w-[90%] md:w-[80%] lg:w-[70%] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 items-center'>
-      <div className='d:p-10 p-5 bg-[#0F224C] rounded-lg'>
-        <div>
-          <form className='flex flex-col gap-4 text-white' 
-            onSubmit={handleSubmit}>
-            <input className='grid grid-cols-1 md:grid-cols-1 gap-4 text-white bg-[#6A7282] p-2 rounded-md mt-4 w-full'
-            type="text" 
-            name="your-name" 
-            placeholder="Name" />
-            <input className='grid grid-cols-1 md:grid-cols-1 gap-4 text-white bg-[#6A7282] p-2 rounded-md mt-4 w-full'
-            type="phone" 
-            name="your-phone" 
-            placeholder="Phone" />
-            <input className='grid grid-cols-1 md:grid-cols-1 gap-4 text-white bg-[#6A7282] p-2 rounded-md mt-4 w-full'
-            type="email" 
-            name="your-email" 
-            placeholder="Email" />
-            <textarea className='grid grid-cols-1 md:grid-cols-1 gap-4 text-white bg-[#6A7282] p-2 rounded-md mt-4 w-full'
-            rows={4}
-            name="your-message" 
-            placeholder="Your message" />
-          </form>
-        </div>
-      <button 
-        className='bg-[#FC9700] text-white py-2 px-4 rounded-md mt-7 hover:bg-[#e68a00] cursor-pointer transition-all duration-300 ease-in-out'
-        type="submit">
-        Send Message
+    <form
+      onSubmit={handleSubmit}
+      className="flex flex-col gap-4 p-6 bg-[#0F224C] rounded-md text-white"
+    >
+      <input
+        type="text"
+        name="names[first_name]" // 👈 dokładnie tak, jak Fluent Forms oczekuje
+        placeholder="Imię"
+        required
+        className="bg-[#6A7282] p-2 rounded-md"
+      />
+
+      <input
+        type="email"
+        name="email"
+        placeholder="Email"
+        required
+        className="bg-[#6A7282] p-2 rounded-md"
+      />
+
+      <textarea
+        name="message"
+        placeholder="Twoja wiadomość"
+        rows={4}
+        required
+        className="bg-[#6A7282] p-2 rounded-md"
+      />
+
+      <button
+        type="submit"
+        className="bg-[#FC9700] hover:bg-[#e68a00] py-2 px-4 rounded-md font-semibold"
+      >
+        Wyślij
       </button>
-      {message && <p>{message}</p>}
-      </div>
-    </div>
+
+      {message && (
+        <p className="mt-2 text-sm text-green-400 font-semibold">{message}</p>
+      )}
+    </form>
   );
 }

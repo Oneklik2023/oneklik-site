@@ -11,6 +11,7 @@ import Contact from './Contact/Contact'
 import Contact2 from './Contact2/Contact2'
 import ScrollToTop from '../Helper/ScrollToTop'
 import News from './News/News'
+import LogoSlider from './LogoSlider/LogoSlider'
 
 
 const Home = () => {
@@ -41,11 +42,11 @@ const Home = () => {
       <section id="what-we-do">
       <WhatWeDo />
       </section>
+      <section id="logo-slider">
+      <LogoSlider />
+      </section>
       <section id="contact">
       <Contact />
-      </section>
-      <section id="contact2">
-      <Contact2 />
       </section>
     </div>
     )

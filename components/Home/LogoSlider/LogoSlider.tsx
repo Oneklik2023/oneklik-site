@@ -1,44 +1,31 @@
-import React, { useState, useRef } from "react";
-import Slider from "react-slick";
+import Image from 'next/image';
+import React from 'react';
 
-function SlickGoTo() {
-  const [slideIndex, setSlideIndex] = useState(0);
-  const sliderRef = useRef<Slider | null>(null);
+const logos = [
+  { src: '/file.svg', alt: 'Logo 1' },
+  { src: '/globe.svg', alt: 'Logo 2' },
+  { src: '/window.svg', alt: 'Logo 3' },
+];
 
-  const settings = {
-    dots: false,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 4,
-    afterChange: (index: number) => setSlideIndex(index),
-  };
+const LogoSlider: React.FC = () => {
+  const repeatedLogos = [...logos, ...logos, ...logos, ...logos]; // duplikujemy loga
 
   return (
-    <div className="w-full h-32 bg-gray-800 flex items-center justify-center">
-      <input
-        type="number"
-        onChange={e => sliderRef.current?.slickGoTo(Number(e.target.value))}
-        value={slideIndex}
-        min={0}
-        max={4}
-      />
-      <Slider ref={sliderRef} {...settings}>
-        <div>
-          <img className="slider-image w-10 h-10" src="/file.svg" alt="thumb1" />
-        </div>
-        <div>
-          <img className="slider-image w-10 h-10" src="/globe.svg" alt="thumb2" />
-        </div>
-        <div>
-          <img className="slider-image w-10 h-10" src="/next.svg" alt="thumb3" />
-        </div>
-        <div>
-          <img className="slider-image w-10 h-10" src="/vercel.svg.jpg" alt="thumb4" />
-        </div>
-      </Slider>
+    <div className="pt-16 pb-16 logo_slider__container">
+      <div className="logo_slider__track">
+        {repeatedLogos.map((logo, index) => (
+          <div key={index} className="logo_slider__item">
+            <Image 
+              src={logo.src} 
+              alt={logo.alt} 
+              width={100} 
+              height={60}
+              />
+          </div>
+        ))}
+      </div>
     </div>
   );
-}
+};
 
-export default SlickGoTo;
+export default LogoSlider;

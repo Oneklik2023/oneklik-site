@@ -42,14 +42,14 @@ export default function News() {
 
   if (posts.length === 0) {
     return (
-      <div className="pt-16 pb-16 w-[70%] mx-auto  text-center text-white/60 sm:w-[85%]">
+      <div className="pt-16 pb-16 mx-auto text-center text-white/60 md-[70%] w-[90%]">
         Loading news...
       </div>
     );
   }
 
   return (
-    <div className="pt-16 pb-16 w-[70%] mx-auto sd:w-[85%]">
+    <div className="pt-16 pb-16 w-[70%] mx-auto ">
       <h1 className="text-center text-2xl md:text-4xl xl:text-5xl font-bold text-white">
         <span className="text-[#FC9700]">News</span>
       </h1>

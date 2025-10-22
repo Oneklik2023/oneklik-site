@@ -1,38 +1,62 @@
 @import "tailwindcss";
-html {
-  scroll-behavior: smooth;
-}
-body {
-  @apply bg-[#0a192f] text-white;
-}
 
-.logo_slider {
+html { scroll-behavior: smooth; }
+body { @apply bg-[#0a192f] text-white; }
+
+/* ==============================
+   Logo slider – płynny scroll
+   ============================== */
+
+/* rozmiar paska – kontrola prędkości przez zmienną */
+.logo_slider__container {
+  --marquee-speed: 100s; /* większa wartość = wolniej (np. 120s) */
   overflow: hidden;
-  height: 150px;
-  display: flex;
-  align-items: center;
   position: relative;
+  width: 100%;
 }
 
+/* tor przesuwu */
 .logo_slider__track {
   display: flex;
-  gap: 5rem; /* Odstęp między logami */
   width: max-content;
-  animation: slideLogos 20s linear infinite;
+  animation: scrollLogos var(--marquee-speed) linear infinite;
 }
 
+/* element listy */
 .logo_slider__item {
-  flex-shrink: 0;
+  flex: 0 0 auto;
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-right: 2.5rem;
+  opacity: 0.95;
+  transition: opacity .3s ease, transform .3s ease;
+}
+.logo_slider__item:hover { opacity: 1; transform: scale(1.03); }
+
+/* stała RAMKA na logo – TYLKO to kontroluje wielkość, obraz wypełnia ramkę */
+.logo_box {
+  position: relative;     /* wymagane dla <Image fill /> */
+  width: 240px;           /* powiększ tu, jeśli chcesz większe */
+  height: 140px;          /* powiększ tu, jeśli chcesz większe */
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: 12px;
+  background: transparent;
 }
 
-@keyframes slideLogos {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-20%);
-  }
+/* mobile – nieco mniejsze */
+@media (max-width: 768px) {
+  .logo_slider__container { --marquee-speed: 120s; } /* wolniej na mobile */
+  .logo_box { width: 180px; height: 105px; }
 }
+
+/* zatrzymanie na hover */
+.logo_slider__container:hover .logo_slider__track { animation-play-state: paused; }
+
+/* kluczowa animacja */
+@keyframes scrollLogos {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+/* 🚫 USUŃ WSZYSTKIE stylowania .logo_slider__item img – kolidują z object-fit */

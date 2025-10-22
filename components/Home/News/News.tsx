@@ -12,7 +12,7 @@ type Aktualnosc = {
   };
 };
 
-const getImageUrl = (img: any): string | null => {
+const getImageUrl = (img: string | { url?: string } | undefined | null): string | null => {
   if (!img) return null;
   if (typeof img === "string" && img.trim() !== "") return img;
   if (typeof img === "object" && img.url) return img.url;

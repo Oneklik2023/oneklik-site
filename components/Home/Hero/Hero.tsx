@@ -41,10 +41,10 @@ const Hero = () => {
                 }} />
               </span>
             </h2>
-            <button className='mt-6 px-10 py-4 bg-[#FC9700] text-white font-bold rounded-full hover:bg-[#FC8100] transition-all duration-300'>
+            <a className='mt-6 px-10 py-4 bg-[#FC9700] text-white font-bold rounded-full hover:bg-[#FC8100] transition-all duration-300 inline-flex items-center' href="#projects" role="button">
               See my work
               <BsArrowRight className='w-5 h-5 inline-block ml-2' />
-            </button>
+            </a>
         </div>
     </div>
   )

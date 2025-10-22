@@ -8,10 +8,10 @@ import Projects from './Projects/Projects'
 import Skills from './Skills/Skills'
 import WhatWeDo from './WhatWeDo/WhatWeDo'
 import Contact from './Contact/Contact'
-import Contact2 from './Contact2/Contact2'
 import ScrollToTop from '../Helper/ScrollToTop'
 import News from './News/News'
 import LogoSlider from './LogoSlider/LogoSlider'
+/*import Footer from './Footer/Footer'*/
 
 
 const Home = () => {
@@ -26,9 +26,6 @@ const Home = () => {
       <section id="resume">
       <Resume />
       </section>
-      {/* <section id="projectx">
-      <Projectx />
-      </section> */}
       <section id="projects">
       <Projects />
       </section>

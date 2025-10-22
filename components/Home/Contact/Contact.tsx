@@ -1,5 +1,6 @@
 'use client';
 import React from 'react';
+import Image from 'next/image';
 import {
   BiEnvelope,
   BiPhoneIncoming,
@@ -7,13 +8,23 @@ import {
   BiLogoFacebook,
   BiLogoInstagram,
 } from 'react-icons/bi';
-import ContactForm from '@/components/ContactForm/ContactForm';
+
 
 const Contact = () => {
   return (
     <div className='pt-16 pb-16'>
       <div className='w-[90%] md:w-[80%] lg:w-[70%] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 items-center'>
-        {/* Left Side - Text content */}
+        {/* Left Side - Contact Form */}
+        <div>
+          <Image
+            src='/images/logo-ok.svg'
+            alt='Oneklik logo'
+            width={400}
+            height={120}
+            className='h-auto hover:scale-105 transition-transform duration-300 ease-in-out shadow-lg'
+          />
+        </div>
+        {/* Right Side - Text content */}
         <div>
           <h1 className='text-2xl md:text-4xl xl:text-5xl font-bold text-[#FC9700]'>
             Consultation
@@ -66,9 +77,6 @@ const Contact = () => {
             </a>
           </div>
         </div>
-
-        {/* Right Side - Contact Form */}
-        <ContactForm />
       </div>
     </div>
   );

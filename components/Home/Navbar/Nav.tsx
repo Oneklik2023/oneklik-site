@@ -12,20 +12,16 @@ type Props = {
 
 const Nav = ({ openNav }: Props) => {
     const [navBg, setNavBg] = useState(false);
-    const [mounted, setMounted] = useState(false);
 
     useEffect(() => {
-        setMounted(true);
         const handler = () =>  {
             if (window.scrollY >= 90) setNavBg(true);
-            else setNavBg(false);
+            if (window.scrollY < 90) setNavBg(false);
             };
 
         window.addEventListener('scroll', handler);
         return () => window.removeEventListener('scroll', handler);
 }, []);
-
- if (!mounted) return null; // NIE renderuj nic przed "hydracją" na kliencie
 
   return (
     <div 

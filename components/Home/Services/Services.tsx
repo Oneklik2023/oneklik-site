@@ -6,7 +6,7 @@ import { GrUpdate } from "react-icons/gr";
 import { GrVmMaintenance } from "react-icons/gr";
 
 const Services = () => {
-  return <div className= "pt-48 pb-16">
+  return <div className= "pt-32 pb-16">
     <h1 className='text-2xl text-center md:text-4xl xl:text-5xl font-bold
     text-white'>Your website will not only <br />look better, but it will also <br />become more functional <br />and user-friendly.
     </h1>

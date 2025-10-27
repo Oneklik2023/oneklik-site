@@ -13,6 +13,7 @@ import LogoGallery from './LogoSlider/LogoGallery'
 
 
 
+
 const Home = () => {
   return (
     <div className="overflow-hidden">
@@ -31,9 +32,9 @@ const Home = () => {
       <section id="skills">
       <Skills />
       </section>
-      <section id="news">
+      {/*<section id="news">
       <News />
-      </section>
+      </section>*/}
       <ScrollToTop />
       <section id="what-we-do">
       <WhatWeDo />

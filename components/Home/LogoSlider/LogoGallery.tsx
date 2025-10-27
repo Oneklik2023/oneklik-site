@@ -33,13 +33,13 @@ export default function LogoGallery() {
   if (!logos.length) return <div className="py-12 text-center">Brak logotypów.</div>;
 
   return (
-    <div className="pt-48 pb-16">
+    <div className="pt-32 pb-16">
       <h1 className="text-center text-2xl md:text-4xl xl:text-5xl font-bold text-white">
         They Trust <span className="text-[#FC9700]">Us</span>
       </h1>
 
       <div className="py-16 w-[90%] sm:w-[70%] mx-auto">
-        <ul className="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-4 gap-4">
+        <ul className="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-6 gap-4">
           {logos.map((l, i) => {
             const useProxy = !broken[l.id];
             const src = useProxy

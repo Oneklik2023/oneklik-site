@@ -30,7 +30,7 @@ const responsive = {
 
 const WhatWeDo = () => {
   return (
-     <div className=' pt-48 pb-16'>
+     <div className=' pt-32 pb-16'>
       <h1 className='text-center text-2xl md:text-4xl xl:text-5xl font-bold text-white'>
         What We
         <span className='text-[#FC9700]'> Do </span>

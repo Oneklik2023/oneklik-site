@@ -44,7 +44,7 @@ const skills = [
 
 const Skills = () => {
   return (
-    <div className='text-white pt-48 pb-16 mx-auto'>
+    <div className='text-white pt-32 pb-16 mx-auto'>
       <h1 className='text-center text-5xl md:text-4xl xl:text-5xl font-bold text-white'>
         My<span className='text-[#FC9700]'> Skills </span>
     </h1>

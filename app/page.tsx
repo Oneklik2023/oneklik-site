@@ -1,18 +1,17 @@
-import Home from '../components/Home/Home'
-import React from 'react'
+'use client';
 
-const HomePage = () => {
+import React from 'react';
+import Home from '../components/Home/Home';
+import { useTranslation } from 'react-i18next';
+
+const HomePage: React.FC = () => {
+  const { t } = useTranslation();
+
   return (
-    <div className='overflow-hidden'>
+    <div className="overflow-hidden">
       <Home />
     </div>
-  )
-}
+  );
+};
 
-export default HomePage
-
-
-// localhost:3000
-// localhost:3000/about
-// localhost:3000/about/team
-// localhost:3000/about/team/Tomas
+export default HomePage;

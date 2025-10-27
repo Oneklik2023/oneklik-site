@@ -55,7 +55,7 @@ const Nav = ({ openNav }: Props) => {
         <a  href = "mailto:biuro@oneklik.pl">
             <button className='px-6 py-2.5 text-sm cursor-pointer rounded-lg bg-[#FC9700] hover:bg-[#FC8100] transition-all duration-300 text-white flex items-center space-x-2'>
               <BiEnvelope className='w-5 h-5' />
-              <span>Send email</span>
+              <span>Email</span>
             </button>
         </a>
         {/* burger menu */}

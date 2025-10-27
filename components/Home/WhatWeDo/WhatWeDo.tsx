@@ -30,12 +30,12 @@ const responsive = {
 
 const WhatWeDo = () => {
   return (
-     <div className=' pt-16 pb-16'>
+     <div className=' pt-48 pb-16'>
       <h1 className='text-center text-2xl md:text-4xl xl:text-5xl font-bold text-white'>
         What We
         <span className='text-[#FC9700]'> Do </span>
       </h1>
-      <div className='mt-16 w-[70%] mx-auto sd:w-[85%]'> 
+      <div className='mt-16 w-[90%] sm:w-[70%] mx-auto sd:w-[85%]'> 
         <Carousel
  
   showDots={false}
@@ -75,8 +75,8 @@ const WhatWeDo = () => {
     name="Advertising campaigns"
     description="Meta (FB) Ads - effective tools advertising for your business. In today's digital world, where competition in the digital space is intense, Meta Ads (formerly known as Facebook Ads) are a key tool that allows businesses to achieve significant increases in visibility and engagement. Our services focus on leveraging the advertising potential of Meta platforms, including Facebook and Instagram, to help your business achieve its marketing goals." 
     />
-</Carousel>
-     </div>
+        </Carousel>
+      </div>
     </div>
   )
 };

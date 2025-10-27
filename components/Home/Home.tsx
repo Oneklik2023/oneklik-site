@@ -3,15 +3,14 @@ import React from 'react'
 import Hero from './Hero/Hero'
 import Services from './Services/Services'
 import Resume from './Resume/Resume'
-/*import Projectx from './ProjectX/ProjectX'*/
 import Projects from './Projects/Projects'
 import Skills from './Skills/Skills'
 import WhatWeDo from './WhatWeDo/WhatWeDo'
 import Contact from './Contact/Contact'
 import ScrollToTop from '../Helper/ScrollToTop'
 import News from './News/News'
-import LogoSlider from './LogoSlider/LogoSlider'
-/*import Footer from './Footer/Footer'*/
+import LogoGallery from './LogoSlider/LogoGallery'
+
 
 
 const Home = () => {
@@ -39,8 +38,8 @@ const Home = () => {
       <section id="what-we-do">
       <WhatWeDo />
       </section>
-      <section id="logo-slider">
-      <LogoSlider />
+      <section id="logo-gallery">
+      <LogoGallery />
       </section>
       <section id="contact">
       <Contact />

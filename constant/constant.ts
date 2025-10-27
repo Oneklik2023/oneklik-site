@@ -36,6 +36,11 @@ export const NavLinks = [
 },
 {
     id: 8,
+    url: "#logo-gallery",
+    label: "They Trust Us",
+},
+{
+    id: 9,
     url: "#contact",
     label: "Contact",
 },

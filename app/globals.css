@@ -3,60 +3,45 @@
 html { scroll-behavior: smooth; }
 body { @apply bg-[#0a192f] text-white; }
 
-/* ==============================
-   Logo slider – płynny scroll
-   ============================== */
+/* Rozmiary i prędkość slidera na desktop */
+:root {
+  --logo-w: 240px;
+  --logo-h: 140px;
+  --marquee-speed: 100s;
+}
 
-/* rozmiar paska – kontrola prędkości przez zmienną */
 .logo_slider__container {
-  --marquee-speed: 100s; /* większa wartość = wolniej (np. 120s) */
   overflow: hidden;
   position: relative;
   width: 100%;
 }
-
-/* tor przesuwu */
 .logo_slider__track {
   display: flex;
   width: max-content;
   animation: scrollLogos var(--marquee-speed) linear infinite;
+  will-change: transform;
+  transform: translateZ(0);
 }
-
-/* element listy */
 .logo_slider__item {
   flex: 0 0 auto;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-right: 2.5rem;
-  opacity: 0.95;
-  transition: opacity .3s ease, transform .3s ease;
+  min-width: var(--logo-w);
+  min-height: var(--logo-h);
+  margin-right: 2rem;
 }
-.logo_slider__item:hover { opacity: 1; transform: scale(1.03); }
-
-/* stała RAMKA na logo – TYLKO to kontroluje wielkość, obraz wypełnia ramkę */
 .logo_box {
-  position: relative;     /* wymagane dla <Image fill /> */
-  width: 240px;           /* powiększ tu, jeśli chcesz większe */
-  height: 140px;          /* powiększ tu, jeśli chcesz większe */
+  position: relative;
+  width: var(--logo-w);
+  height: var(--logo-h);
   border: 1px solid rgba(255,255,255,.08);
   border-radius: 12px;
-  background: transparent;
 }
-
-/* mobile – nieco mniejsze */
-@media (max-width: 768px) {
-  .logo_slider__container { --marquee-speed: 120s; } /* wolniej na mobile */
-  .logo_box { width: 180px; height: 105px; }
-}
-
-/* zatrzymanie na hover */
 .logo_slider__container:hover .logo_slider__track { animation-play-state: paused; }
-
-/* kluczowa animacja */
 @keyframes scrollLogos {
   from { transform: translateX(0); }
   to   { transform: translateX(-50%); }
 }
 
-/* 🚫 USUŃ WSZYSTKIE stylowania .logo_slider__item img – kolidują z object-fit */
+/* 🔑 NIE dodawaj żadnych reguł .logo_slider__item img {...} przy użyciu <Image fill /> */

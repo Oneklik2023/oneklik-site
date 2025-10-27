@@ -12,7 +12,7 @@ type Realizacje = {
   };
 };
 
-const getImageUrl = (img: any): string | null => {
+const getImageUrl = (img: string | { url?: string } | undefined): string | null => {
   if (!img) return null;
   if (typeof img === "string" && img.trim() !== "") return img;
   if (typeof img === "object" && img.url) return img.url;
@@ -41,8 +41,8 @@ export default function Realizacje() {
   };
 
   return (
-    <div className="pt-16 pb-16 w-[70%] mx-auto sd:w-[85%]">
-      <h1 className='text-center text-2xl md:text-4xl xl:text-5xl font-bold text-white'>
+    <div className="pt-48 pb-16 w-[90%] sm:w-[70%] mx-auto">
+      <h1 className='text-center text-3xl md:text-4xl xl:text-5xl font-bold text-white'>
         A small selection of recent <br /> {" "}
         <span className='text-[#FC9700]'> projects </span>
       </h1>
@@ -63,11 +63,11 @@ export default function Realizacje() {
                   alt={post.acf?.nazwa_realizacji ?? ""}
                   width={800}
                   height={500}
-                  className="rounded-md"
+                  className="rounded-md transition-transform duration-500 ease-in-out hover:scale-120 hover:rotate-23"
                 />
               ) : null}
 
-              <h2 className="text-xl font-semibold mt-4">
+              <h2 className="text-xl md:text-2xl font-semibold mt-4">
                 {post.acf?.nazwa_realizacji}
               </h2>
 

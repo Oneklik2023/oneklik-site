@@ -1,5 +1,10 @@
 'use client';
 
+// app/page.tsx
+export default function Home() {
+  return <main style={{padding: 24}}>OK25 — działa 🎉</main>;
+}
+
 import React from 'react';
 import Home from '../components/Home/Home';
 import { useTranslation } from 'react-i18next';

@@ -8,7 +8,7 @@ import Skills from './Skills/Skills'
 import WhatWeDo from './WhatWeDo/WhatWeDo'
 import Contact from './Contact/Contact'
 import ScrollToTop from '../Helper/ScrollToTop'
-import News from './News/News'
+/*import News from './News/News'*/
 import LogoGallery from './LogoSlider/LogoGallery'
 
 

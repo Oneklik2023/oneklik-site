@@ -22,12 +22,12 @@ export default function RootLayout({
   return (
     // suppressHydrationWarning wygasza drobne różnice SSR/CSR zanim i18n przełączy język po mount
     <html lang="en" suppressHydrationWarning>
-      <body className={`${font.className} antialiased bg-[#0d0d1f]`}>
-        <ResponsiveNav />
-        {/* Ustaw język (z localStorage/navigator) po stronie klienta, już po hydratacji */}
-        {children}
-        <Footer />
-      </body>
-    </html>
+  <body suppressHydrationWarning className={`${font.className} antialiased bg-[#0d0d1f]`}>
+    <ResponsiveNav />
+    {children}
+    <Footer />
+  </body>
+</html>
+
   );
 }

@@ -42,7 +42,7 @@ async function fetchJsonWithHttpsHttpFallback<T>(path: string) {
     const r = await fetch(httpsUrl, { cache: "no-store", headers });
     if (r.ok) return (await r.json()) as T;
     throw new Error(`HTTPS ${r.status}`);
-  } catch (e) {
+  } catch {
     // 2) HTTP fallback (często leczy lokalne problemy TLS/IPv6 w Node)
     const httpUrl = `http://${WP_BASE}${path}`;
     const r = await fetch(httpUrl, { cache: "no-store", headers });

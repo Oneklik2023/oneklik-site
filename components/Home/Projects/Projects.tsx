@@ -24,17 +24,15 @@ export default function Realizacje() {
   const [expanded, setExpanded] = useState<{ [key: number]: boolean }>({});
   const [visibleCount, setVisibleCount] = useState(4); // 👈 widoczne 4 wpisy
 
-  useEffect(() => {
-    fetch("http://cms.oneklik.pl/wp-json/wp/v2/realizacje")
-      .then((res) => res.json())
-      .then((data) => {
-        if (Array.isArray(data)) {
-          setPosts(data);
-        } else {
-          console.error("API zwróciło coś innego niż tablicę:", data);
-        }
-      });
-  }, []);
+useEffect(() => {
+  fetch("/api/realizacje")
+    .then((res) => res.json())
+    .then((data) => {
+      if (Array.isArray(data)) setPosts(data);
+      else console.error("API zwróciło coś innego niż tablicę:", data);
+    });
+}, []);
+
 
   const toggleExpand = (id: number) => {
     setExpanded((prev) => ({ ...prev, [id]: !prev[id] }));

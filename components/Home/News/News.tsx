@@ -25,7 +25,7 @@ export default function News() {
   const [visibleCount, setVisibleCount] = useState(4); // 👈 widoczne 4 wpisy
 
   useEffect(() => {
-    fetch("http://cms.oneklik.pl/wp-json/wp/v2/aktualnosci")
+    fetch("/api/aktualnosci")
       .then((res) => res.json())
       .then((data) => {
         if (Array.isArray(data)) {

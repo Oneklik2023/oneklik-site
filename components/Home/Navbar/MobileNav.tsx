@@ -50,7 +50,7 @@ const MobileNav = ({ showNav, closeNav }: Props) => {
     showNav ? "opacity-70 pointer-events-auto" : "opacity-0 pointer-events-none";
 
   return (
-    <div aria-hidden={!showNav}>
+    <div aria-hidden={String(!showNav)}>
       {/* overlay (klik = zamknij) */}
       <div
         onClick={closeNav}

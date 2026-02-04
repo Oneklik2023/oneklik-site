@@ -5,10 +5,8 @@ import React from 'react'
 import { BsArrowRight } from 'react-icons/bs'
 import Typewriter from 'typewriter-effect'
 import ParticleHero from './ParticleBackground'
-import { useTranslation } from 'react-i18next';
 
 const Hero: React.FC = () => {
-  const { t } = useTranslation();
 
   return (
     <div className='relative h-screen flex items-center justify-center text-white overflow-hidden flex-col'>
@@ -24,10 +22,10 @@ const Hero: React.FC = () => {
             className='rounded-[10%] border-1 border-[#FC9700]'
             />
             <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl mt-6 text-center font-bold tracking-wide">
-              {t('We transform inefficient websites')} <span className="text-[#FC9700]"> <br />{t('into modern layouts.')}</span>
+              {('We transform inefficient websites')} <span className="text-[#FC9700]"> <br />{('into modern layouts.')}</span>
             </h1>
             <h2 className="mt-5 text-sm px-2 text-center sm:text-2xl font-medium flex items-center">
-              {t('Do You need:')}
+              {('Do You need:')}
               <span className="text-[#FC9700] font-bold">
                 <Typewriter
                   options={{
@@ -47,7 +45,7 @@ const Hero: React.FC = () => {
               </span>
             </h2>
             <a className='mt-6 px-10 py-4 bg-[#FC9700] text-white font-bold rounded-full hover:bg-[#FC8100] transition-all duration-300 inline-flex items-center' href="#projects" role="button">
-              {t('See my work')}
+              {('See my work')}
               <BsArrowRight className='w-5 h-5 inline-block ml-2' />
             </a>
         </div>

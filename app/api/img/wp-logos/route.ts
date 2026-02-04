@@ -1,3 +1,5 @@
+// VERCEL_MARKER_2026_02_04
+
 // app/api/img/wp-logos/route.ts
 import { NextResponse } from "next/server";
 

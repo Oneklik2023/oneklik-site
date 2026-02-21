@@ -61,7 +61,7 @@ useEffect(() => {
                   alt={post.acf?.nazwa_realizacji ?? ""}
                   width={800}
                   height={500}
-                  className="rounded-md transition-transform duration-500 ease-in-out hover:scale-120 hover:rotate-23"
+                  className="rounded-md transition-transform duration-500 ease-in-out hover:scale-105 hover:rotate-3"
                 />
               ) : null}
 

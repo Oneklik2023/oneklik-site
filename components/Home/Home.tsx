@@ -10,6 +10,7 @@ import Contact from './Contact/Contact'
 import ScrollToTop from '../Helper/ScrollToTop'
 /*import News from './News/News'*/
 import LogoGallery from './LogoSlider/LogoGallery'
+import { Analytics } from "@vercel/analytics/next"
 
 
 
@@ -17,6 +18,7 @@ import LogoGallery from './LogoSlider/LogoGallery'
 const Home = () => {
   return (
     <div className="overflow-hidden">
+      <Analytics/>React
       <section id="home">
       <Hero />
       </section>

@@ -27,10 +27,11 @@ const Contact = () => {
         {/* Right Side - Text content */}
         <div>
           <h1 className='text-2xl md:text-4xl xl:text-5xl font-bold text-[#FC9700]'>
-            Consultation
+            Może porozmawiamy? <br /> {" "}
           </h1>
           <p className='text-gray-400 mt-4 text-justify'>
-            We invite you to a free consulting session where we will take a thorough look at your current business strategy and the ambitions you plan to achieve. Based on an initial assessment of your current business initiatives, we will propose tailored solutions and tactics that will support your financial capabilities and long-term company development. It&apos;s important to know that participating in this consultation is completely non-binding. If you decide you&apos;re not ready to continue working with us at this time, we&apos;ll be happy to offer you helpful advice and support.
+            Zapraszamy na bezpłatną rozmowę, podczas której przeanalizujemy Twoje potrzeby i zaproponujemy konkretne rozwiązania.
+Spotkanie nie zobowiązuje do współpracy — możesz potraktować je jako wsparcie i wskazówki do dalszych działań.
           </p>
 
           {/* Contact info */}

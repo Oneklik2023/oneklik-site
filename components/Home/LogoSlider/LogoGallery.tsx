@@ -35,7 +35,7 @@ export default function LogoGallery() {
   return (
     <div className="pt-32 pb-16">
       <h1 className="text-center text-2xl md:text-4xl xl:text-5xl font-bold text-white">
-        They Trust <span className="text-[#FC9700]">Us</span>
+        Oni nam już <br></br><span className="text-[#FC9700]">zaufali:</span>
       </h1>
 
       <div className="py-16 w-[90%] sm:w-[70%] mx-auto">

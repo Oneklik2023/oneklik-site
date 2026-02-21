@@ -72,11 +72,11 @@ useEffect(() => {
   return (
     <div className="pt-32 pb-16 w-[90%] sm:w-[70%] mx-auto">
       <h1 className='text-center text-3xl md:text-4xl xl:text-5xl font-bold text-white'>
-        A small selection of recent <br /> {" "}
-        <span className='text-[#FC9700]'> projects </span>
+        Kilka naszych <br /> {" "}
+        <span className='text-[#FC9700]'> realizacji </span>
       </h1>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-20 mt-12">
         {posts.slice(0, visibleCount).map((post) => {
           const imageUrl = getImageUrl(post.acf?.grafika_realizacji);
           const isExpanded = expanded[post.id] ?? false;

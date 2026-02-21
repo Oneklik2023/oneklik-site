@@ -7,22 +7,22 @@ export const NavLinks = [
 {
     id: 2,
     url: "#services",
-    label: "Services",
+    label: "Usługi",
 },
 {
     id: 3,
     url: "#resume",
-    label: "Resume",
+    label: "Doświadczenie",
 },
 {
     id: 4,
     url: "#projects",
-    label: "Projects",
+    label: "Realizacje",
 },
 {
     id: 5,
     url: "#skills",
-    label: "Skills",
+    label: "Umiejętności",
 },
 /*{
     id: 6,
@@ -32,17 +32,17 @@ export const NavLinks = [
 {
     id: 7,
     url: "#what-we-do",
-    label: "What We Do",
+    label: "Czym się zajmujemy",
 },
 {
     id: 8,
     url: "#logo-gallery",
-    label: "They Trust Us",
+    label: "Zaufali nam",
 },
 {
     id: 9,
     url: "#contact",
-    label: "Contact",
+    label: "Kontakt",
 },
 
 ]

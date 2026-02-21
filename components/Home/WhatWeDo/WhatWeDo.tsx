@@ -32,8 +32,8 @@ const WhatWeDo = () => {
   return (
      <div className=' pt-32 pb-16'>
       <h1 className='text-center text-2xl md:text-4xl xl:text-5xl font-bold text-white'>
-        What We
-        <span className='text-[#FC9700]'> Do </span>
+        Czym się zajmujemy<br /> {" "}
+        <span className='text-[#FC9700]'> i co możemy dla Ciebie zrobić? </span>
       </h1>
       <div className='mt-16 w-[90%] sm:w-[70%] mx-auto sd:w-[85%]'> 
         <Carousel
@@ -47,33 +47,34 @@ const WhatWeDo = () => {
 >
     <WhatWeDoCard
     Icon={FiRefreshCw}
-    name="Update"
-    description="We are updating websites in any programming environment. In a dynamic digital world where website security and modernity are the foundation of every brand's success, we offer professional website update services. Our team has extensive expertise in a variety of programming environments, allowing us to update your website efficiently and effectively, regardless of the technology used." 
+    name="Aktualizacja"
+    description="Aktualizujemy strony internetowe niezależnie od wykorzystywanej technologii czy środowiska programistycznego. W dynamicznie zmieniającym się świecie cyfrowym bezpieczeństwo i nowoczesność serwisu stanowią fundament sukcesu każdej marki." 
     />
     <WhatWeDoCard
     Icon={MdDevices}
-    name="Development"
-    description="We will expand Your current websitein line with current needs. In the era of digital transformation, where your website represents your company's online presence, we understand how crucial it is to keep it current and aligned with evolving market needs and customer expectations. Our website development service is designed to ensure your digital image evolves alongside your business." 
+    name="Rozwój strony"
+    description="Rozbudujemy Twoją obecną stronę internetową zgodnie z aktualnymi potrzebami Twojej firmy. W dobie cyfrowej transformacji, gdy witryna stanowi kluczowy element obecności marki w sieci, doskonale rozumiemy, jak ważne jest jej stałe dostosowywanie do zmieniających się wymagań rynku i oczekiwań klientów." 
     />
     <WhatWeDoCard
     Icon={FiCheckCircle}
-    name="Page maintenance"
-    description="Integrated services management i administration websites. We understand how important it is for a website to be not only visually appealing but also effectively managed and secure. That's why we provide a full range of services to keep your website in optimal condition, allowing you to focus on growing your business, confident that your digital assets are in good hands." 
+    name="Opieka nad stroną"
+    description="Kompleksowe zarządzanie i administracja stroną internetową. Doskonale rozumiemy, że serwis powinien być nie tylko estetyczny, ale przede wszystkim bezpieczny, stabilny i odpowiednio zarządzany.
+    Dlatego oferujemy pełen zakres usług utrzymaniowych, które zapewniają sprawne działanie strony oraz jej optymalną kondycję techniczną. Dzięki temu możesz skupić się na rozwoju swojego biznesu, mając pewność, że Twoja obecność w sieci jest w dobrych rękach." 
     />
     <WhatWeDoCard
     Icon={FiChrome}
-    name="Website"
-    description="We will build for you complete pagewith a content management system. In today's world, where a digital presence is crucial to business success, we offer comprehensive website development services equipped with an intuitive and flexible content management system (CMS). Our solution is ideal for companies and entrepreneurs who want complete control over the content and functionality of their website." 
+    name="Strona internetowa z CMS"
+    description="Stworzymy dla Ciebie kompletną stronę internetową wyposażoną w system zarządzania treścią (CMS). W dzisiejszych realiach cyfrowych silna obecność online jest kluczowa dla rozwoju biznesu, dlatego oferujemy kompleksowe tworzenie nowoczesnych, funkcjonalnych serwisów. Nasze rozwiązania zapewniają intuicyjny i elastyczny system zarządzania treścią, dzięki któremu zyskujesz pełną kontrolę nad zawartością i rozwojem swojej strony." 
     />
     <WhatWeDoCard
     Icon={FiBell}
-    name="Social media support"
-    description="Management media social media:Facebook and Instagram. In the age of digital marketing, an active presence and effective management of social media platforms like Facebook and Instagram are crucial to any brand's success. Our company offers professional social media management services, focusing on building a strong, engaging, and high-conversion presence for your brand on these platforms." 
+    name="Obsługa social media"
+    description="Kompleksowe zarządzanie profilami w mediach społecznościowych — Facebook i Instagram. W erze marketingu cyfrowego aktywna i profesjonalnie prowadzona komunikacja w social media to jeden z filarów skutecznej strategii marki. Budujemy spójny wizerunek, tworzymy angażujące treści i prowadzimy działania nastawione na realne wyniki — większy zasięg, zaangażowanie i konwersję." 
     />
     <WhatWeDoCard
     Icon={FaMeta}
-    name="Advertising campaigns"
-    description="Meta (FB) Ads - effective tools advertising for your business. In today's digital world, where competition in the digital space is intense, Meta Ads (formerly known as Facebook Ads) are a key tool that allows businesses to achieve significant increases in visibility and engagement. Our services focus on leveraging the advertising potential of Meta platforms, including Facebook and Instagram, to help your business achieve its marketing goals." 
+    name="Kampanie reklamowe"
+    description="Meta Ads (Facebook & Instagram) — skuteczne narzędzie promocji Twojego biznesu. W świecie intensywnej konkurencji online precyzyjnie zaplanowane kampanie reklamowe pozwalają znacząco zwiększyć widoczność marki i dotrzeć do właściwej grupy odbiorców. Projektujemy i optymalizujemy kampanie na platformach Meta, koncentrując się na maksymalizacji efektów i realizacji Twoich celów marketingowych." 
     />
         </Carousel>
       </div>

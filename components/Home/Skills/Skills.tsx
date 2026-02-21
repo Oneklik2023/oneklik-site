@@ -17,7 +17,7 @@ const skills = [
     },
     { 
         name: "TypeScript", 
-        level: "Beginner", 
+        level: "Medium", 
         icon: <SiTypescript /> 
     },
     { 

@@ -24,14 +24,45 @@ export default function Realizacje() {
   const [expanded, setExpanded] = useState<{ [key: number]: boolean }>({});
   const [visibleCount, setVisibleCount] = useState(4); // 👈 widoczne 4 wpisy
 
-useEffect(() => {
+/*useEffect(() => {
   fetch("/api/realizacje")
     .then((res) => res.json())
     .then((data) => {
       if (Array.isArray(data)) setPosts(data);
       else console.error("API zwróciło coś innego niż tablicę:", data);
     });
-}, []);
+}, []);*/
+
+  /*nowy use effect 21.02.2026*/
+useEffect(() => {
+  (async () => {
+    try {
+      const res = await fetch("/api/realizacje", { cache: "no-store" });
+      console.log("[realizacje] status:", res.status);
+
+      const text = await res.text();
+      console.log("[realizacje] raw:", text.slice(0, 400));
+
+      let data: unknown;
+      try {
+        data = JSON.parse(text);
+      } catch (e) {
+        console.error("[realizacje] response is not JSON");
+        return;
+      }
+
+      console.log("[realizacje] parsed:", data);
+
+      if (res.ok && Array.isArray(data)) {
+        setPosts(data as Realizacje[]);
+      } else {
+        console.error("[realizacje] unexpected payload:", { status: res.status, data });
+      }
+    } catch (e) {
+      console.error("[realizacje] fetch failed:", e);
+    }
+  })();
+}, []);  
 
 
   const toggleExpand = (id: number) => {

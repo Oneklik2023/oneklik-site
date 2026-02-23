@@ -9,52 +9,86 @@ const Resume = () => {
   return (
     <div className="pt-32 pb-16">
       <div className="w-[90%] sm:w-[70%] mx-auto grid grid-cols-1 xl:grid-cols-2 gap-10">
+        
+        {/* education part */}
+        <div>
+          <h1 className="text-3xl sm:text-4xl font-bold text-white">
+            Edukacja <span className="text-[#FC9700]">Przez Projekty</span>
+          </h1>
+          <p className="text-white mt-4">Nasze doświadczenie budowaliśmy poprzez realne projekty komercyjne. Każda realizacja to praktyczna nauka UX, optymalizacji, pracy z klientem oraz wdrażania rozwiązań biznesowych. Niektóre z nich poniżej:</p>
+          
+          <div className="mt-10">
+            <ResumeCard 
+            Icon={FaGraduationCap} 
+            role="zagrodapodlasem.pl" 
+            date="2022" 
+            /*description1="ZAKRES PRAC"*/
+            description="Strona od podstaw, UX, Integracja galerii i map, Konfiguracja analityki"
+            />
+          </div>
+          
+          <div className="mt-10">
+            <ResumeCard 
+            Icon={FaGraduationCap} 
+            role="autoserwishapunowicz.pl"
+            date="2022" 
+            /*description1="ZAKRES PRAC"*/
+            description="Strona firmowa od podstaw, UX, Integracja formularzy, Sekcja usług, Optymalizajca SEO"
+            />
+          </div>
+          
+          <div className="mt-10">
+            <ResumeCard 
+            Icon={FaGraduationCap} 
+            role="biuromagart.pl"
+            date="2022" 
+            /*description1="ZAKRES PRAC"*/
+            description="Strona firmowa, Integracja formularzy, Sekcja usług, Optymalizajca SEO"
+            />
+          </div>
+          
+          <div className="mt-10">
+            <ResumeCard 
+            Icon={FaGraduationCap} 
+            role="nova-clinic.com.pl"
+            date="2023" 
+            /*description1="ZAKRES PRAC"*/
+            description="Strona firmowa od podstaw, UX, Sekcja usług, Cenniki, Optymalizajca SEO"
+            />
+          </div>
+
+          <div className="mt-10">
+            <ResumeCard 
+            Icon={FaGraduationCap} 
+            role="esmart.net.pl"
+            date="2024" 
+            /*description1="ZAKRES PRAC"*/
+            description="Frontend strony firmowej, Przygotowanie struktury pod SEO, Integracja z backendem, Responsywność i optymalizacja"
+            />
+          </div>
+
+
+        </div>
         {/*work part */}
         <div>
           <h1 className="text-3xl sm:text-4xl font-bold text-white">
-            Moje <span className="text-[#FC9700]">Doświadczenie</span>
+            Nasze <span className="text-[#FC9700]">Doświadczenie</span>
           </h1>
           <div className="mt-10">
             <ResumeCard 
             Icon={FaWordpress} 
             role="Front-End Developer" 
-            description="Od lat tworzę strony internetowe w oparciu o WordPress. Realizowałem zarówno proste strony firmowe, jak i bardziej rozbudowane projekty. Łączę estetykę z funkcjonalnością i zawsze dopasowuję rozwiązania do potrzeb klienta."
+            description="Od kilku lat tworzymy strony internetowe w oparciu o WordPress. Realizujemy zarówno proste strony firmowe, jak i bardziej rozbudowane projekty. Łączymy estetykę z funkcjonalnością i zawsze dopasowujemy rozwiązania do potrzeb klienta."
             />
             <ResumeCard 
             Icon={FaReact} 
             role="Front-End Developer" 
-            description="Rozwijam swoje kompetencje w nowoczesnych technologiach takich jak React i Next.js, budując wydajne, szybkie aplikacje internetowe. Pracuję nad projektami, które pozwalają mi łączyć kreatywność z technologią, dostarczając użytkownikom wyjątkowe doświadczenia online."  
+            description="Rozwijamy swoje kompetencje w nowoczesnych technologiach takich jak React i Next.js, budując wydajne, szybkie aplikacje internetowe. Pracujemy nad projektami, które pozwalają nam łączyć kreatywność z technologią, dostarczając użytkownikom wyjątkowe doświadczenia online."  
             />
             <ResumeCard 
             Icon={BsDatabase} 
             role="Back-End Developer" 
-            description="Rozwijam umiejętności w zakresie baz danych i integracji systemów, co pozwala mi tworzyć coraz bardziej kompleksowe rozwiązania. Pracuję nad projektami, które wymagają zarówno front-endu, jak i back-endu, co daje mi szansę na ciągły rozwój i poszerzanie kompetencji w różnych obszarach programowania."
-            />
-
-          </div>
-        </div>
-        {/* education part */}
-        <div>
-          <h1 className="text-3xl sm:text-4xl font-bold text-white">
-            Moja <span className="text-[#FC9700]">Edukacja</span>
-          </h1>
-          <div className="mt-10">
-            <ResumeCard 
-            Icon={FaGraduationCap} 
-            role="Studia podyplomowe" 
-            date="10.2022 - 06.2023" 
-            description="Studia podyplomowe – ICT i Programowanie
-Politechnika Białostocka
-
-Poszerzyłem wiedzę z zakresu nowoczesnych technologii i zdobyłem solidne podstawy programistyczne. Program obejmował m.in. programowanie w JavaScript, React, Node.js, a także zagadnienia związane z bazami danych i bezpieczeństwem. Studia te pozwoliły mi rozwinąć umiejętności techniczne i przygotować się do pracy w branży IT."
-            />
-          </div>
-          <div className="mt-10">
-            <ResumeCard 
-            Icon={FaGraduationCap} 
-            role="Rozwój poprzez projekty"
-            date="06.2023 - obecnie" 
-            description="Realizuję strony internetowe, projekty graficzne oraz kampanie reklamowe. Każdy projekt to nowe doświadczenie i rozwój kompetencji. Pracuję nad różnorodnymi zleceniami, co pozwala mi ciągle poszerzać swoje umiejętności i dostosowywać się do zmieniających się potrzeb rynku. Moje projekty obejmują zarówno proste strony firmowe, jak i bardziej rozbudowane realizacje, a także kampanie reklamowe w mediach społecznościowych."
+            description="Rozwijamy umiejętności w zakresie baz danych i integracji systemów, co pozwala nam tworzyć coraz bardziej kompleksowe rozwiązania. Pracujemy nad projektami, które wymagają zarówno front-endu, jak i back-endu, co daje nam szansę na ciągły rozwój i poszerzanie kompetencji w różnych obszarach programowania."
             />
           </div>
         </div>

@@ -18,7 +18,7 @@ import { Analytics } from "@vercel/analytics/next"
 const Home = () => {
   return (
     <div className="overflow-hidden">
-      <Analytics/>React
+      <Analytics/>
       <section id="home">
       <Hero />
       </section>

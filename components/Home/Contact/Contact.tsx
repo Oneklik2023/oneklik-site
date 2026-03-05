@@ -61,7 +61,7 @@ Spotkanie nie zobowiązuje do współpracy — możesz potraktować je jako wspa
           </div>
 
           {/* Social icons */}
-          <div className='flex items-center space-x-2 mt-8'>
+          {/*<div className='flex items-center space-x-2 mt-8'>
             <a
               href='https://www.facebook.com/oneklik22'
               target='_blank'
@@ -76,7 +76,7 @@ Spotkanie nie zobowiązuje do współpracy — możesz potraktować je jako wspa
             >
               <BiLogoInstagram className='w-8 h-8 hover:text-[#FC9700] bg-gray-500 hover:bg-white p-1 rounded-full transition-all duration-300 ease-in-out' />
             </a>
-          </div>
+          </div>*/}
         </div>
       </div>
     </div>

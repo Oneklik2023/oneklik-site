@@ -25,7 +25,7 @@ const ResumeCard = ({ Icon, role, /*date,*/ description }: Props) => {
               transition-all duration-500 ease-out
               group-hover:brightness-100 
               group-hover:invert-0
-              group-hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.7)]
+              /*group-hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.7)]*/
               "
             />
           ) : Icon ? (
